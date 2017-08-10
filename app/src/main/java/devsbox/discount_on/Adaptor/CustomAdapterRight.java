@@ -14,26 +14,26 @@ import devsbox.discount_on.R;
  * Created by Jihan on 10-Aug-17.
  */
 
-public class CustomAdapterLeft extends ArrayAdapter<String> {
+public class CustomAdapterRight extends ArrayAdapter<String> {
 
     private final Activity context;
-    private final String[] header_left;
-    private final String[] address_left;
-    private final String[] percent_left;
+    private final String[] header_right;
+    private final String[] address_right;
+    private final String[] percent_right;
 
-    private final Integer[] imageId_left;
+    private final Integer[] imageId_right;
 
-    public CustomAdapterLeft(Activity context, String[] header_left, String[] address_left, Integer[] imageId_left ,String[] percent_left) {
+    public CustomAdapterRight(Activity context, String[] header_right, String[] address_right, Integer[] imageId_right ,String[] percent_right) {
 
-        super(context, R.layout.home_left_listview, header_left);
+        super(context, R.layout.home_right_listview, header_right);
 
 
         this.context = context;
 
-        this.header_left = header_left;
-        this.address_left = address_left;
-        this.percent_left = percent_left;
-        this.imageId_left = imageId_left;
+        this.header_right = header_right;
+        this.address_right = address_right;
+        this.percent_right = percent_right;
+        this.imageId_right = imageId_right;
 
     }
 
@@ -50,10 +50,10 @@ public class CustomAdapterLeft extends ArrayAdapter<String> {
 
         ImageView imageView = (ImageView) rowView.findViewById(R.id.HomeLeftImageListImageView);
 
-        txtHeader.setText(header_left[position]);
-        txtAddress.setText(address_left[position]);
-        txtPercent.setText(percent_left[position]);
-        imageView.setImageResource(imageId_left[position]);
+        txtHeader.setText(header_right[position]);
+        txtAddress.setText(address_right[position]);
+        txtPercent.setText(percent_right[position]);
+        imageView.setImageResource(imageId_right[position]);
 
         return rowView;
     }

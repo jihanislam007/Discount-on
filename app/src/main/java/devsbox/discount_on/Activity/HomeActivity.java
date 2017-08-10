@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import devsbox.discount_on.Adaptor.CustomAdapterLeft;
+import devsbox.discount_on.Adaptor.CustomAdapterRight;
 import devsbox.discount_on.R;
 
 public class HomeActivity extends AppCompatActivity
@@ -19,15 +20,16 @@ public class HomeActivity extends AppCompatActivity
 
 
     ListView left_list;
+    ListView right_list;
 
-    String[] header = {
+    String[] header_left = {
             "Agoda Up To 12% OFF In Malaysia Hotel For GP STAR",
             "Get 30% Discount On Our Entire KAMEEZ Line",
             "GP STAR 10% off @ Rangs",
             "GP STAR Will Enjoy Upto 60% Discount On Room Rent @ Sikder Resort & Villas In Kuakata"
     } ;
 
-    String[] address = {
+    String[] address_left = {
             "Published date: August 1, 2017   Modified date: August 5, 2017\n" +
                     "www.agoda.com/, Online support",
             "Published date: July 30, 2017   Modified date: July 30, 2017  \n" +
@@ -36,17 +38,47 @@ public class HomeActivity extends AppCompatActivity
             "Sikder Resort & Villas, Hossainpara, Mohipur, Kuakakta, Bangladesh"
     } ;
 
-    String[] percent = {"10.00%",
+    String[] percent_left = {"10.00%",
             "20.00%",
             "15.00%",
             "50.00%"
     } ;
 
-    Integer[] imageId = {
+    Integer[] imageId_left = {
             R.drawable.a,
             R.drawable.b,
             R.drawable.c,
             R.drawable.d
+    };
+
+    ////////////////////////////////////////////////////////////////////////////////
+    String[] header_right= {
+            "Agoda Up To 12% OFF In Malaysia Hotel For GP STAR",
+            "Get 30% Discount On Our Entire KAMEEZ Line",
+            "GP STAR 10% off @ Rangs",
+            "GP STAR Will Enjoy Upto 60% Discount On Room Rent @ Sikder Resort & Villas In Kuakata"
+    } ;
+
+    String[] address_right = {
+            "Published date: August 1, 2017   Modified date: August 5, 2017\n" +
+                    "www.agoda.com/, Online support",
+            "Published date: July 30, 2017   Modified date: July 30, 2017  \n" +
+                    " Bangladesh",
+            "Grameenphone  All Outlet of Rangs Electronics Limited (Dhaka) August 1, 2017",
+            "Sikder Resort & Villas, Hossainpara, Mohipur, Kuakakta, Bangladesh"
+    } ;
+
+    String[] percent_right = {"10.00%",
+            "20.00%",
+            "15.00%",
+            "50.00%"
+    } ;
+
+    Integer[] imageId_right = {
+            R.drawable.d,
+            R.drawable.c,
+            R.drawable.b,
+            R.drawable.a
     };
 
     @Override
@@ -56,15 +88,23 @@ public class HomeActivity extends AppCompatActivity
 
 
 ///////////////////List view left///////
-        CustomAdapterLeft adapter = new CustomAdapterLeft(HomeActivity.this, header,address, imageId , percent);
+        CustomAdapterLeft adapter = new CustomAdapterLeft(HomeActivity.this, header_left,address_left, imageId_left , percent_left);
 
         left_list=(ListView)findViewById(R.id.left_listListView);
         left_list.setAdapter(adapter);
 
-        left_list=(ListView)findViewById(R.id.Right_listListView);
-        left_list.setAdapter(adapter);
+        /*left_list=(ListView)findViewById(R.id.Right_listListView);
+        left_list.setAdapter(adapter);*/
 
 
+        /////////////////////////////////////////////////right///
+        CustomAdapterRight adapter_right = new CustomAdapterRight(HomeActivity.this, header_right,address_right, imageId_right , percent_right);
+
+        /*left_list=(ListView)findViewById(R.id.left_listListView);
+        left_list.setAdapter(adapter);*/
+
+        right_list=(ListView)findViewById(R.id.Right_listListView);
+        right_list.setAdapter(adapter_right);
 
         ////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////
