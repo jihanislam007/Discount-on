@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">Discount-on</string>
-    <string name="title_activity_home">Discount-on</string>
+    <string name="title_activity_home">Discount-on.com</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_search">Search</string>
+
+    <string name="premium">PREMIUM</string>
+    <string name="all">ALL</string>
+    <string name="latest">LATEST</string>
+
 </resources>
